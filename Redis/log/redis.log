@@ -1,0 +1,7 @@
+19:C 05 May 2022 16:49:51.368 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+19:C 05 May 2022 16:49:51.372 # Redis version=6.2.6, bits=64, commit=00000000, modified=0, pid=19, just started
+19:C 05 May 2022 16:49:51.375 # Configuration loaded
+19:M 05 May 2022 16:49:51.380 * monotonic clock: POSIX clock_gettime
+19:M 05 May 2022 16:49:51.394 * Running mode=standalone, port=6379.
+19:M 05 May 2022 16:49:51.398 # Server initialized
+19:M 05 May 2022 16:49:51.412 * Ready to accept connections

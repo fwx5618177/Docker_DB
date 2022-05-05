@@ -28,3 +28,22 @@ services:
       timeout: 10s
       retries: 3
     restart: unless-stopped
+  redis:
+    image: redis:test
+    container_name: redisDB
+    platform: linux/amd64
+    build:
+      context: "./Redis"
+      dockerfile: "Dockerfile"
+    environment:
+      - REDIS_PORT=6379
+      - REDIS_PASSWORD=123456
+    ports:
+      - 6379:6379
+    restart: unless-stopped
+    volumes:
+      - $PWD/Redis/data:/data
+      - $PWD/Redis/log:/redis/log
+      - $PWD/Redis/conf:/redis/conf
+
+

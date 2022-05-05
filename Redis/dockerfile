@@ -1,0 +1,23 @@
+FROM redis:latest
+
+RUN mkdir -p /redis/log
+
+WORKDIR /redis/conf
+
+# RUN mkdir -p /redis/conf
+
+# ADD ./conf/redis.conf /redis/conf/redis.conf
+# ADD ./conf/redis_entrypoint.sh /redis/conf/redis_entrypoint.sh
+
+# RUN chown redis:redis /redis/* && \ 
+#     # chmod +x /usr/local/bin/redis_entrypoint.sh
+
+RUN chown redis:redis /redis/*
+
+EXPOSE 6379
+
+VOLUME [ "/data" ]
+VOLUME [ "/redis/conf" ]
+VOLUME [ "/redis/log" ]
+
+CMD ["sh", "/redis/conf/redis_entrypoint.sh"]
